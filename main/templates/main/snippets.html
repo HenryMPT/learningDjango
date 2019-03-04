@@ -1,0 +1,24 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+
+<script>M.toast({html: "Mind your manners!", classes: 'yellow rounded', displayLength:2000});</script>
+
+  <div class="row">
+  	{% for post in posts %}
+	    <div class="col s12 m6 l0">
+	      <div class="card cyan darken-2 hoverable">
+	        <div class="card-content white-text">
+	          <span class="card-title">{{post.title}}</span>
+	          <p style="font-size:70%">{{post.published}}</p>
+	          <p>{{post.body|safe}}</p>
+	        </div>
+	        <div class="card-action">
+	          <a href="#">Posted by {{post.username.get_username}}</a>
+	        </div>
+	      </div>
+	    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
