@@ -19,3 +19,7 @@ class Post(models.Model):
 		body = models.TextField()
 		username = models.ForeignKey(User,  on_delete="cascade")
 		published = models.DateTimeField("date published", default=datetime.now())
+
+		def __str__(self):
+			return self.title
+

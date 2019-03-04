@@ -6,12 +6,12 @@
 
   <div class="row">
   	{% for post in posts %}
-	    <div class="col s12 m6 l0">
+	    <div class="col s12">
 	      <div class="card cyan darken-3 hoverable">
 	        <div class="card-content white-text">
 	          <span class="card-title">{{post.title}}</span>
 	          <p style="font-size:70%">{{post.published}}</p>
-	          <p>{{post.body|safe}}</p>
+	          <div class ="turtle">{{post.body|safe}}</div>
 	        </div>
 	        <div class="card-action">
 	          <a href="#">Posted by {{post.username.get_username}}</a>
