@@ -24,6 +24,7 @@ class NewUserForm(UserCreationForm):
 
 
 
+
 class PostForm(ModelForm):
 	username = User.username
 	title = forms.CharField()
