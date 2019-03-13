@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tutorial, Post, TutorialCategory, TutorialSeries
+from .models import Tutorial, Post, TutorialCategory, TutorialSeries, Organization
 from tinymce.widgets import TinyMCE
 from django.db import models
 
@@ -31,7 +31,9 @@ class PostAdmin(admin.ModelAdmin):
 
 
 
+
 admin.site.register(TutorialSeries)
 admin.site.register(TutorialCategory)
 admin.site.register(Tutorial,TutorialAdmin)
 admin.site.register(Post, PostAdmin)
+admin.site.register(Organization)
